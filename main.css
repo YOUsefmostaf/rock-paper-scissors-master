@@ -1,0 +1,235 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-perspective: 600px;
+          perspective: 600px;
+}
+
+body {
+  background-color: #16193d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+header {
+  margin-top: 50px;
+  width: 80%;
+  color: white;
+  border: 3px solid #c7c6c6;
+  border-radius: 5px;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 100px;
+}
+
+header div:first-of-type {
+  font-weight: bold;
+}
+
+header div:nth-of-type(2) {
+  background-color: white;
+  color: #3535f3;
+  padding: 20px 25px;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+}
+
+header div:nth-of-type(2) p:nth-of-type(2) {
+  color: #adabab;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+section {
+  -webkit-transition: all 1.5s ease-in-out;
+  transition: all 1.5s ease-in-out;
+  background-image: url("images/bg-pentagon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 350px;
+  height: 350px;
+  margin-bottom: 150px;
+}
+
+section .container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+section .container div {
+  position: absolute;
+  background-color: var(--color);
+  -webkit-transition: all 2s ease-in-out;
+  transition: all 2s ease-in-out;
+}
+
+section .container div.scissors {
+  top: -11%;
+  left: 30%;
+}
+
+section .container div.spock {
+  left: -15%;
+  top: 17%;
+}
+
+section .container div.paper {
+  top: 17%;
+  left: 75%;
+}
+
+section .container div.lizard {
+  top: 71%;
+  left: 0%;
+}
+
+section .container div.rock {
+  top: 71%;
+  left: 58%;
+}
+
+section .container img {
+  -webkit-transition: all 0.8s ease-in-out;
+  transition: all 0.8s ease-in-out;
+  background-color: white;
+  cursor: pointer;
+  border: 15px solid var(--color);
+  width: 130px;
+  height: 130px;
+  padding: 20px;
+  border-radius: 100%;
+}
+
+section .container img:hover {
+  -webkit-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2);
+}
+
+section .play-again {
+  display: none;
+  position: absolute;
+  top: 37%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+section .play-again h1 {
+  color: white;
+}
+
+section .play-again button {
+  padding: 5px 10px;
+  outline: none;
+  background-color: white;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.image:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: all 0.8s ease-in-out;
+  transition: all 0.8s ease-in-out;
+}
+
+.modal {
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  background-color: #00000052;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: none;
+}
+
+.modal div {
+  background-color: #ddd;
+  padding: 30px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.modal div span {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.rule {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  outline: none;
+  padding: 5px 20px;
+  background-color: transparent;
+  border: 2px solid #eee;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+@-webkit-keyframes move-images {
+  0% {
+    display: block;
+  }
+  100% {
+    top: 17%;
+    left: 75%;
+    opacity: 0;
+  }
+}
+
+@keyframes move-images {
+  0% {
+    display: block;
+  }
+  100% {
+    top: 17%;
+    left: 75%;
+    opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  #game {
+    width: 320px;
+    height: 350px;
+  }
+}
+/*# sourceMappingURL=main.css.map */

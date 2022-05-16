@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <title>Frontend Mentor | Rock, Paper, Scissors</title>
+  </head>
+  <body>
+    <header>
+      <div>
+        <p>ROCK</p>
+        <p>PAPER</p>
+        <p>SCISSORS</p>
+        <p>LIZARD</p>
+        <p>SPOCK</p>
+      </div>
+      <div>
+        <p>Score</p>
+        <p id="score"></p>
+      </div>
+    </header>
+
+    <section id="game">
+      <div class="container">
+        <div class="scissors">
+          <img
+            src="images/icon-scissors.svg"
+            alt="scissors"
+            style="--color: #ec9e0e"
+            id="1"
+          />
+        </div>
+        <div class="spock">
+          <img
+            src="images/icon-spock.svg"
+            alt="spock"
+            style="--color: #45bace"
+            id="2"
+          />
+        </div>
+        <div class="paper">
+          <img
+            src="images/icon-paper.svg"
+            alt="paper"
+            style="--color: #546ff5"
+            id="3"
+          />
+        </div>
+        <div class="lizard">
+          <img
+            src="images/icon-lizard.svg"
+            alt="lizard"
+            style="--color: #8c57e5"
+            id="4"
+          />
+        </div>
+        <div class="rock">
+          <img src="images/icon-rock.svg" alt="rock" style="--color: #dd3c5a" id="5"/>
+        </div>
+      </div>
+      <div class="play-again" id="again">
+        <h1 id="message"></h1>
+        <button id="play-more">Play Again</button>
+      </div>
+    </section>
+
+
+    <div class="modal" id="modal">
+      <div>
+        <img src="images/image-rules-bonus.svg" />
+        <span class="close" id="close">X</span>
+      </div>
+    </div>
+
+    <button class="rule" type="button" id="button">Rule</button>
+    <script src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,183 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  perspective: 600px;
+}
+$white: white;
+body {
+  background-color: #16193d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+header {
+    margin-top: 50px;
+  width: 80%;
+  color: $white;
+  border: 3px solid #c7c6c6;
+  border-radius: 5px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 100px;
+  div:first-of-type {
+    font-weight: bold;
+  }
+  div:nth-of-type(2) {
+    background-color: white;
+    color: rgb(53, 53, 243);
+    padding: 20px 25px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+
+    p:nth-of-type(2) {
+      color: #adabab;
+      margin-top: 10px;
+      font-weight: bold;
+      font-size: 25px;
+    }
+  }
+}
+
+section {
+  transition: all 1.5s ease-in-out;
+  background-image: url("images/bg-pentagon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 350px;
+  height: 350px;
+  margin-bottom: 150px;
+  .container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    div {
+      position: absolute;
+      background-color: var(--color);
+      transition: all 2s ease-in-out;
+    }
+    div.scissors {
+      top: -11%;
+      left: 30%;
+
+    }
+    div.spock {
+      left: -15%;
+      top: 17%;
+    }
+    div.paper {
+      top: 17%;
+      left: 75%;
+    }
+    div.lizard {
+      top: 71%;
+      left: 0%;
+    }
+    div.rock {
+      top: 71%;
+      left: 58%;
+    }
+
+    img {
+      transition: all 0.8s ease-in-out;
+      background-color: white;
+      cursor: pointer;
+      border: 15px solid var(--color);
+      width: 130px;
+      height: 130px;
+      padding: 20px;
+      border-radius: 100%;
+      &:hover {
+        transform: scale(1.2, 1.2);
+      }
+    }
+  }
+
+  .play-again {
+      display: none;
+    position: absolute;
+    top: 37%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    h1 {
+      color: white;
+    }
+    button {
+      padding: 5px 10px;
+      outline: none;
+      background-color: white;
+      border: 2px solid #ddd;
+      border-radius: 5px;
+      margin-top: 15px;
+      cursor: pointer;
+    }
+  }
+}
+
+.image:hover {
+  transform: scale(1.2);
+  transition: all 0.8s ease-in-out;
+}
+
+.modal {
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  background-color: #00000052;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  div {
+    background-color: #ddd;
+    padding: 30px;
+    border-radius: 5px;
+    position: relative;
+    span {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+    }
+  }
+  display: none;
+}
+
+.rule {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  outline: none;
+  padding: 5px 20px;
+  background-color: transparent;
+  border: 2px solid #eee;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+@keyframes move-images {
+  0% {
+    display: block;
+  }
+  100% {
+    top: 17%;
+    left: 75%;
+    opacity: 0;
+  }
+}
+
+@media (max-width:768px) {
+    #game{
+        width: 320px;
+        height: 350px;
+    }
+    
+}
